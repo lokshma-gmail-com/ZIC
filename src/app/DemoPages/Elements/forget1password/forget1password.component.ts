@@ -26,6 +26,7 @@ export class Forget1passwordComponent implements OnInit {
     console.log(this.forgetdata)
     
     const payload = new FormData();
+    localStorage.setItem('fmail',this.forgetdata.fmail)
  
     payload.append('fmail',this.forgetdata.fmail);
     this.auth.forgetpassword(payload).subscribe(res=>{

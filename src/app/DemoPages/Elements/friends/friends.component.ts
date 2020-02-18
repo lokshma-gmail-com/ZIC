@@ -82,18 +82,21 @@ export class FriendsComponent implements OnInit,AfterViewInit  {
     console.log(selected.requestto+"todata")
     this.router.navigate(['/elements/friendsdetails']);
   }
-request(selected:any){
-  this.snackbar.open("Request Sent...","undo",{duration:5000});
+request(selected:any)
+{this.snackbar.open("Request Sent...","undo",{duration:5000});
+
+
+
   
 
-
+  console.log("in side ");
 
     const payload = new FormData();
    
-    this.p1.nativeElement.innerHTML = "Requested";
-    this.p1.nativeElement.style.background="green";
-    this.p1.nativeElement.value=this.value;
-    console.log(this.value+"value is");
+    // this.p1.nativeElement.innerHTML = "Requested";
+    // this.p1.nativeElement.style.background="green";
+    // this.p1.nativeElement.value=this.value;
+    // console.log(this.value+"value is");
  
     
    

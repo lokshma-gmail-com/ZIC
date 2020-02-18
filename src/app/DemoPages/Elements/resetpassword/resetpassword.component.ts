@@ -27,10 +27,12 @@ export class ResetpasswordComponent implements OnInit {
     payload.append('token1',this.logindata.token);
     payload.append('updatepassword',this.logindata.updatepassword);
     console.log(payload+"payload")
+    console.log(localStorage.getItem('fmail') +"fmail is")
     this.auth.resetpassword(payload).subscribe(res=>{
       console.log(res)
       this.array=res;
-      console.log(this.array.data.n)
+      console.log(res);
+      console.log(this.array.data.n+"string is")
 
       if(this.array.data.n==1){
       Swal.fire('',this.array.msg,'success')
