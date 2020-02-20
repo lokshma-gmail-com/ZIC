@@ -82,9 +82,10 @@ export class FriendsComponent implements OnInit,AfterViewInit  {
     console.log(selected.requestto+"todata")
     this.router.navigate(['/elements/friendsdetails']);
   }
-request(selected:any)
-{this.snackbar.open("Request Sent...","undo",{duration:5000});
 
+request(selected:any){
+  this.snackbar.open("Request Sent...","undo",{duration:5000});
+  console.log("inside hello");
 
 
   
@@ -117,6 +118,7 @@ request(selected:any)
       console.log(this.addfriend);
     this.auth.addfriend(payload).subscribe(res=>{
       console.log(res);
+      console.log("inside res is")
     }
 
     )
